@@ -1,0 +1,48 @@
+{
+  "feature_columns": [
+    "IND",
+    "RAIN",
+    "IND.1",
+    "T.MAX",
+    "IND.2",
+    "T.MIN.G",
+    "wind_lag_1",
+    "wind_lag_2",
+    "wind_lag_3",
+    "ma_3",
+    "ma_5",
+    "ma_7",
+    "std_3",
+    "std_5",
+    "std_7"
+  ],
+  "feature_descriptions": {
+    "IND": "Weather Index 1",
+    "RAIN": "Rainfall (mm)",
+    "IND.1": "Weather Index 2",
+    "T.MAX": "Maximum Temperature (\u00b0C)",
+    "IND.2": "Weather Index 3",
+    "T.MIN.G": "Minimum Ground Temperature (\u00b0C)",
+    "wind_lag_1": "Wind speed lag 1 day",
+    "wind_lag_2": "Wind speed lag 2 days",
+    "wind_lag_3": "Wind speed lag 3 days",
+    "ma_3": "3-day moving average",
+    "ma_5": "5-day moving average",
+    "ma_7": "7-day moving average",
+    "std_3": "3-day standard deviation",
+    "std_5": "5-day standard deviation",
+    "std_7": "7-day standard deviation"
+  },
+  "model_type": "RandomForestRegressor",
+  "model_params": {
+    "n_estimators": 60,
+    "max_depth": 4,
+    "max_features": 9
+  },
+  "performance": {
+    "test_mae": 3.3741206956387644,
+    "train_mae": 3.2149845751496224,
+    "test_r2": 0.3015564210919668,
+    "train_r2": 0.321013008582263
+  }
+}

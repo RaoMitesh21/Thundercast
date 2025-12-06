@@ -1,0 +1,67 @@
+{
+  "feature_columns": [
+    "wind_sfc_speed_ms",
+    "wind_sfc_dir_deg",
+    "wind_500_speed_ms",
+    "wind_500_dir_deg",
+    "temp_2m_C",
+    "temp_500_C",
+    "rh_2m_pct",
+    "pressure_sfc_hPa",
+    "precipitable_water_mm",
+    "cloud_cover_frac",
+    "cloud_top_temp_C",
+    "CAPE_Jkg",
+    "Lifted_Index_C",
+    "K_index",
+    "shear_850_500_ms"
+  ],
+  "feature_descriptions": {
+    "wind_sfc_speed_ms": "Surface wind speed (m/s)",
+    "wind_sfc_dir_deg": "Surface wind direction (degrees)",
+    "wind_500_speed_ms": "500mb wind speed (m/s)",
+    "wind_500_dir_deg": "500mb wind direction (degrees)",
+    "temp_2m_C": "2m temperature (\u00b0C)",
+    "temp_500_C": "500mb temperature (\u00b0C)",
+    "rh_2m_pct": "2m relative humidity (%)",
+    "pressure_sfc_hPa": "Surface pressure (hPa)",
+    "precipitable_water_mm": "Precipitable water (mm)",
+    "cloud_cover_frac": "Cloud cover fraction (0-1)",
+    "cloud_top_temp_C": "Cloud top temperature (\u00b0C)",
+    "CAPE_Jkg": "CAPE (J/kg)",
+    "Lifted_Index_C": "Lifted Index (\u00b0C)",
+    "K_index": "K Index",
+    "shear_850_500_ms": "Wind shear 850-500mb (m/s)"
+  },
+  "default_values": {
+    "wind_sfc_speed_ms": 10,
+    "wind_sfc_dir_deg": 180,
+    "wind_500_speed_ms": 15,
+    "wind_500_dir_deg": 180,
+    "temp_2m_C": 20,
+    "temp_500_C": -5,
+    "rh_2m_pct": 60,
+    "pressure_sfc_hPa": 1013,
+    "precipitable_water_mm": 25,
+    "cloud_cover_frac": 0.5,
+    "cloud_top_temp_C": -20,
+    "CAPE_Jkg": 1000,
+    "Lifted_Index_C": 0,
+    "K_index": 25,
+    "shear_850_500_ms": 10
+  },
+  "model_type": "RandomForestClassifier",
+  "model_params": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "max_features": 6,
+    "criterion": "log_loss",
+    "random_state": 42
+  },
+  "performance": {
+    "train_auc": 0.948929088590633,
+    "test_auc": 0.8459869638131883,
+    "train_accuracy": 0.8688888888888889,
+    "test_accuracy": 0.7894505494505495
+  }
+}
